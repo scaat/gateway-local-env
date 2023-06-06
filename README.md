@@ -11,10 +11,7 @@ admin/admin
 # Prometheus
 
 ```shell
-docker run \                                                                                                                                          ✔  34s  18:13:39 
-    -p 9090:9090 \
-    -v /Users/scaat/Projects/Java/gw/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
-    prom/prometheus
+
 ```
 
 # Sentinel Dashboard
