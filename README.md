@@ -11,20 +11,23 @@ admin/admin
 # Prometheus
 
 ```shell
-
+docker run -d \
+    -p 9090:9090 \
+    -v /Users/scaat/Projects/Java/gw/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
+    prom/prometheus
 ```
 
 # Sentinel Dashboard
 
 ```shell
-mvn clean package
+mvn -f Sentinel-1.8.6/sentinel-dashboard/pom.xml clean package
 ```
 
 ```shell
-java -Dserver.port=8080 \
--Dcsp.sentinel.dashboard.server=localhost:8080 \
+java -Dserver.port=8088 \
+-Dcsp.sentinel.dashboard.server=localhost:8088 \
 -Dproject.name=sentinel-dashboard \
--jar target/sentinel-dashboard.jar
+-jar Sentinel-1.8.6/sentinel-dashboard/target/sentinel-dashboard.jar
 ```
 
 sentinel/sentinel
